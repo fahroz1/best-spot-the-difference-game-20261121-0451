@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Twin Peeks — Spot the Difference</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="brand">🔍 Twin Peeks</div>
+    <div class="hud-item" id="levelLabel">Level 1 · Sunny Park</div>
+    <div class="hud-item" id="foundLabel">Found 0 / 7</div>
+    <div class="hud-item" id="scoreLabel">Score 0</div>
+    <div class="timer-wrap" title="Time left">
+      <div id="timerBar"></div>
+      <span id="timerText">100</span>
+    </div>
+    <button id="hintBtn" class="hud-btn" title="Hint (H)">💡 Hint ×3</button>
+    <button id="soundBtn" class="hud-btn" title="Sound on/off (M)">🔊</button>
+  </header>
+
+  <main id="boards">
+    <section class="panel">
+      <div class="panel-tag">LEFT · Original</div>
+      <canvas id="leftCanvas" width="640" height="420"></canvas>
+    </section>
+    <section class="panel">
+      <div class="panel-tag">RIGHT · Find the changes</div>
+      <canvas id="rightCanvas" width="640" height="420"></canvas>
+    </section>
+  </main>
+
+  <footer id="statusBar">
+    <span id="message">Click a difference on either picture. 7 to find!</span>
+    <span id="comboLabel"></span>
+  </footer>
+
+  <div id="overlay" class="hidden">
+    <div id="overlayCard">
+      <h1 id="overlayTitle">Twin Peeks</h1>
+      <p id="overlayText"></p>
+      <div id="overlayStats"></div>
+      <div id="overlayButtons"></div>
+      <p class="overlay-hint" id="overlayHint"></p>
+    </div>
+  </div>
+</div>
+<script type="module" src="src/game.js"></script>
+</body>
+</html>
